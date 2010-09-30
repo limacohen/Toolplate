@@ -107,9 +107,17 @@ endif; // ends check for toolbox_comment()
 
 		<?php if ( comments_open() ) : // If comments are open, but there are no comments ?>
 
-		<?php else : // if comments are closed ?>
+		<?php else : // or, if we don't have comments:
 
-			<p class="nocomments"><?php _e( 'Comments are closed.', 'themename' ); ?></p>
+			/* If there are no comments and comments are closed,
+			 * let's leave a little note, shall we?
+			 * But only on posts! We don't really need the note on pages.
+			 */
+			if ( ! comments_open() && ! is_page() ) :
+			?>
+			<p class="nocomments"><?php _e( 'Comments are closed.', 'coraline' ); ?></p>
+			<?php endif; // end ! comments_open() && ! is_page() ?>
+
 
 		<?php endif; ?>
 
