@@ -115,7 +115,7 @@ endif; // ends check for toolbox_comment()
 			 */
 			if ( ! comments_open() && ! is_page() ) :
 			?>
-			<p class="nocomments"><?php _e( 'Comments are closed.', 'coraline' ); ?></p>
+			<p class="nocomments"><?php _e( 'Comments are closed.', 'themename' ); ?></p>
 			<?php endif; // end ! comments_open() && ! is_page() ?>
 
 
