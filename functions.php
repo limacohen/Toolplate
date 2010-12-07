@@ -7,6 +7,8 @@
 /**
  * Make theme available for translation
  * Translations can be filed in the /languages/ directory
+ * If you're building a theme based on toolbox, use a find and replace
+ * to change 'toolbox' to the name of your theme in all the template files
  */
 load_theme_textdomain( 'toolbox', TEMPLATEPATH . '/languages' );
 
@@ -66,8 +68,3 @@ function toolbox_widgets_init() {
 	) );	
 }
 add_action( 'init', 'toolbox_widgets_init' );
-
-/**
- * Enable a custom background
- */
-add_custom_background();
