@@ -313,13 +313,8 @@ article.comment {
 /* =Widgets
 -------------------------------------------------------------- */
 
-.widget-area {
-	background: #ffc0cb;
-	padding: 1em 0 0;
-}
 .widget {
 	display: block;
-	padding: 0 1em;
 }
 .widget-area .widget_search {
 	overflow: hidden;
@@ -335,8 +330,4 @@ article.comment {
 #colophon {
 	padding: 1em 0 0;
 }
-
-
-/* =Print
------------------------------------------------ */
 
