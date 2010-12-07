@@ -8,7 +8,7 @@
  * Make theme available for translation
  * Translations can be filed in the /languages/ directory
  */
-load_theme_textdomain( 'themename', TEMPLATEPATH . '/languages' );
+load_theme_textdomain( 'toolbox', TEMPLATEPATH . '/languages' );
 
 $locale = get_locale();
 $locale_file = TEMPLATEPATH . "/languages/$locale.php";
@@ -25,7 +25,7 @@ if ( ! isset( $content_width ) )
  * This theme uses wp_nav_menu() in one location.
  */
 register_nav_menus( array(
-	'primary' => __( 'Primary Menu', 'themename' ),
+	'primary' => __( 'Primary Menu', 'toolbox' ),
 ) );
 
 /**
@@ -47,7 +47,7 @@ add_filter( 'wp_page_menu_args', 'toolbox_page_menu_args' );
  */
 function toolbox_widgets_init() {
 	register_sidebar( array (
-		'name' => __( 'Sidebar 1', 'themename' ),
+		'name' => __( 'Sidebar 1', 'toolbox' ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
@@ -56,9 +56,9 @@ function toolbox_widgets_init() {
 	) );
 
 	register_sidebar( array (
-		'name' => __( 'Sidebar 2', 'themename' ),
+		'name' => __( 'Sidebar 2', 'toolbox' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'An optional second sidebar area', 'themename' ),
+		'description' => __( 'An optional second sidebar area', 'toolbox' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h1 class="widget-title">',
