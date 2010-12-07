@@ -7,7 +7,7 @@
 get_header(); ?>
 
 		<section id="primary">
-			<div id="content">
+			<div id="content" role="main">
 
 				<header class="page-header">
 					<h1 class="page-title"><?php

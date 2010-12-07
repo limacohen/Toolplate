@@ -7,7 +7,7 @@
 get_header(); ?>
 
 		<div id="primary" class="image-attachment">
-			<div id="content">
+			<div id="content" role="main">
 
 			<?php the_post(); ?>
 

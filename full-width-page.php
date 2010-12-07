@@ -10,7 +10,7 @@
 get_header(); ?>
 
 		<div id="primary" class="full-width">
-			<div id="content">
+			<div id="content" role="main">
 
 				<?php the_post(); ?>
 

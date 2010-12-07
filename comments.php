@@ -111,7 +111,7 @@ endif; // ends check for toolbox_comment()
 
 			/* If there are no comments and comments are closed,
 			 * let's leave a little note, shall we?
-			 * But only on posts! We don't really need the note on pages.
+			 * But only on posts! We don't want the note on pages.
 			 */
 			if ( ! comments_open() && ! is_page() ) :
 			?>

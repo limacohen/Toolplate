@@ -7,7 +7,7 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon">
+	<footer id="colophon" role="contentinfo">
 			<div id="site-generator">
 				<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'themename' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s.', 'themename' ), 'WordPress' ); ?></a>
 			</div>

@@ -4,7 +4,7 @@
  * @subpackage Toolbox
  */
 ?>
-		<div id="secondary" class="widget-area">
+		<div id="secondary" class="widget-area" role="complementary">
 			<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
 
 				<aside id="search" class="widget widget_search">
