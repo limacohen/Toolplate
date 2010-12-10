@@ -182,9 +182,9 @@ body {
 	overflow: hidden;
 	width: 100%;
 	margin-top: 50px;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px, inset 0 3px 0 #c4e034;
-	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px, inset 0 3px 0 #c4e034;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px, inset 0 3px 0 #c4e034;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
 	-webkit-border-bottom-right-radius: 7px;
 	-webkit-border-bottom-left-radius: 7px;
 	-moz-border-radius-bottomright: 7px;
@@ -194,6 +194,11 @@ body {
 	border-top: 5px solid #7eb111;
 	z-index: 1;
 	position: relative;
+}
+#primary {
+	-webkit-box-shadow: inset 0 3px 0 #c4e034;
+	-moz-box-shadow: inset 0 3px 0 #c4e034;
+	box-shadow: inset 0 3px 0 #c4e034;
 }
 #primary #content {
 	padding: 20px 40px 0 80px;
@@ -555,6 +560,9 @@ aside.widget_twitter li {
 }
 ul.tweets {
 	padding-left: 0;
+}
+aside.widget_text a {
+	color: #478fa2;
 }
 
 
