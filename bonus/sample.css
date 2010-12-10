@@ -434,12 +434,14 @@ article.post img {
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.06) inset;
 }
 img.alignleft,
-div-alignleft {
+div.alignleft {
 	margin-left: -30px;
+	margin-right: 20px;
 }
 img.alignright,
-div-alignright {
+div.alignright {
 	margin-right: -20px;
+	margin-left: 20px;
 }
 .wp-caption {
 	background: transparent;
