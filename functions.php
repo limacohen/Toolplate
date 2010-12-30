@@ -53,8 +53,8 @@ function toolbox_widgets_init() {
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>',
 	) );
 
 	register_sidebar( array (
@@ -63,8 +63,8 @@ function toolbox_widgets_init() {
 		'description' => __( 'An optional second sidebar area', 'toolbox' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
-		'before_title' => '<h1 class="widget-title">',
-		'after_title' => '</h1>',
+		'before_title' => '<p class="widget-title">',
+		'after_title' => '</p>',
 	) );	
 }
 add_action( 'init', 'toolbox_widgets_init' );

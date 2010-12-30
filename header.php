@@ -42,13 +42,13 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 	<header id="branding">
-			<hgroup role="banner">
-				<h1 id="site-title"><span><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
+			<<?php echo (is_home() || is_front_page()) ? 'hgroup' : 'div' ?> role="banner">
+				<?php if (is_home() || is_front_page()): ?><h1 id="site-title"><?php else: ?><p id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php endif; ?><?php bloginfo( 'name' ); ?></<?php echo (is_home() || is_front_page()) ? 'h1' : 'a></p' ?>>
+				<p id="site-description"><?php bloginfo( 'description' ); ?></p>
+			</<?php echo (is_home() || is_front_page()) ? 'hgroup' : 'div' ?>>
 
 			<nav id="access" role="navigation">
-				<h1 class="section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></h1>
+				<p class="section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></p>
 				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
