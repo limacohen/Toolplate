@@ -15,6 +15,9 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<!--[if lt IE 7 ]>
+	<script src="<?php bloginfo( 'template_directory' ); ?>/js/libs/dd_belatedpng.js"></script>
+	<script>DD_belatedPNG.fix('img, .png_bg');</script>
+<![endif]-->
 </body>
 </html>
