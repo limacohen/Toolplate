@@ -1,16 +1,16 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage Toolplate
  */
 ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 	<nav id="nav-above">
-		<p class="section-heading"><?php _e( 'Post navigation', 'toolbox' ); ?></p>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolbox' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?></div>
+		<p class="section-heading"><?php _e( 'Post navigation', 'toolplate' ); ?></p>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolplate' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'toolplate' ) ); ?></div>
 	</nav><!-- #nav-above -->
 <?php endif; ?>
 
@@ -19,16 +19,16 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
-			<p class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'toolbox' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></p>
+			<p class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'toolplate' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></p>
 
 			<div class="entry-meta">
 				<?php
-					printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'toolbox' ),
+					printf( __( '<span class="sep">Posted on </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'toolplate' ),
 						get_permalink(),
 						get_the_date( 'c' ),
 						get_the_date(),
 						get_author_posts_url( get_the_author_meta( 'ID' ) ),
-						sprintf( esc_attr__( 'View all posts by %s', 'toolbox' ), get_the_author() ),
+						sprintf( esc_attr__( 'View all posts by %s', 'toolplate' ), get_the_author() ),
 						get_the_author()
 					);
 				?>
@@ -37,21 +37,21 @@
 
 		<?php if ( is_archive() || is_search() ) : // Only display Excerpts for archives & search ?>
 		<div class="entry-summary">
-			<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
+			<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolplate' ) ); ?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'toolbox' ), 'after' => '</div>' ) ); ?>
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'toolplate' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'toolplate' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
 		<footer class="entry-meta">
-			<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'toolbox' ); ?></span><?php the_category( ', ' ); ?></span>
+			<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php _e( 'Posted in ', 'toolplate' ); ?></span><?php the_category( ', ' ); ?></span>
 			<span class="sep"> | </span>
-			<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'toolbox' ) . '</span>', ', ', '<span class="sep"> | </span>' ); ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'toolbox' ), __( '1 Comment', 'toolbox' ), __( '% Comments', 'toolbox' ) ); ?></span>
-			<?php edit_post_link( __( 'Edit', 'toolbox' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
+			<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'toolplate' ) . '</span>', ', ', '<span class="sep"> | </span>' ); ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'toolplate' ), __( '1 Comment', 'toolplate' ), __( '% Comments', 'toolplate' ) ); ?></span>
+			<?php edit_post_link( __( 'Edit', 'toolplate' ), '<span class="sep">|</span> <span class="edit-link">', '</span>' ); ?>
 		</footer><!-- #entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
 
@@ -62,8 +62,8 @@
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
 	<nav id="nav-below">
-		<p class="section-heading"><?php _e( 'Post navigation', 'toolbox' ); ?></p>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolbox' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'toolbox' ) ); ?></div>
+		<p class="section-heading"><?php _e( 'Post navigation', 'toolplate' ); ?></p>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'toolplate' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'toolplate' ) ); ?></div>
 	</nav><!-- #nav-below -->
 <?php endif; ?>

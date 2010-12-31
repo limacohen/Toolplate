@@ -3,7 +3,7 @@
  * The template used to display Tag Archive pages
  *
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage Toolplate
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php
-						printf( __( 'Tag Archives: %s', 'toolbox' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+						printf( __( 'Tag Archives: %s', 'toolplate' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 					?></h1>
 				</header>
 

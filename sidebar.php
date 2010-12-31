@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage Toolplate
  */
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
@@ -12,14 +12,14 @@
 				</aside>
 
 				<aside id="archives" class="widget">
-					<p class="widget-title"><?php _e( 'Archives', 'toolbox' ); ?></p>
+					<p class="widget-title"><?php _e( 'Archives', 'toolplate' ); ?></p>
 					<ul>
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 					</ul>
 				</aside>
 
 				<aside id="meta" class="widget">
-					<p class="widget-title"><?php _e( 'Meta', 'toolbox' ); ?></p>
+					<p class="widget-title"><?php _e( 'Meta', 'toolplate' ); ?></p>
 					<ul>
 						<?php wp_register(); ?>
 						<aside><?php wp_loginout(); ?></aside>

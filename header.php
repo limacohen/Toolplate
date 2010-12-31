@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Toolbox
+ * @subpackage Toolplate
  */
 ?><!doctype html>
 <!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="no-js ie6"> <![endif]-->
@@ -32,8 +32,8 @@
 			</<?php echo (is_home() || is_front_page()) ? 'hgroup' : 'div' ?>>
 
 			<nav id="access" role="navigation">
-				<p class="section-heading"><?php _e( 'Main menu', 'toolbox' ); ?></p>
-				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolbox' ); ?>"><?php _e( 'Skip to content', 'toolbox' ); ?></a></div>
+				<p class="section-heading"><?php _e( 'Main menu', 'toolplate' ); ?></p>
+				<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'toolplate' ); ?>"><?php _e( 'Skip to content', 'toolplate' ); ?></a></div>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
